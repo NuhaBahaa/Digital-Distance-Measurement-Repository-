@@ -9,7 +9,7 @@
 #define _DIO_INTERFACE_H_
 
 /***********************************************************************/
-/***********************Public Functions********************************/
+/***********************Variable Like Macros********************************/
 /***********************************************************************/
 
 /*Comment!: Pin Index Values  */
@@ -80,7 +80,6 @@
 extern u8 DIO_u8ReadPinVal(u8 Copy_u8PinIdx, u8* Copy_u8PtrToVal);
 
 /*Comment!: Write Pin Value */
-
 extern u8 DIO_u8WritePinVal(u8 Copy_u8PinIdx, u8 Copy_u8PinVal);
 
 /*Comment!: Read Port Value */

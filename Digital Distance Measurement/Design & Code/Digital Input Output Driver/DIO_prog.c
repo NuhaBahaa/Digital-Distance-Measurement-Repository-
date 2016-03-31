@@ -10,13 +10,19 @@
 #include"DIO_private.h"
 #include"util.h"
 
+
+/*Comment!: DDR Registers */
 static volatile u8* const DIO_u8DDRArr[4]={DIO_u8DDRA, DIO_u8DDRB, DIO_u8DDRC, DIO_u8DDRD};
 
+/*Comment!: Port Registers */
 static volatile u8* const DIO_u8PORTArr[4]={DIO_u8PORTA, DIO_u8PORTB, DIO_u8PORTC, DIO_u8PORTD};
 
+/*Comment!: PIN Registers */
 static volatile u8* const DIO_u8PINArr[4]={DIO_u8PINA, DIO_u8PINB, DIO_u8PINC, DIO_u8PIND};
 
 
+/* Comment!: Initialization function
+ * 	Assign the Initial Dirction and values of the DIO Pins */
 extern void DIO_VoidInit(void)
 {
 
@@ -38,7 +44,10 @@ extern void DIO_VoidInit(void)
 
 
 
-/*Comment!: Read Pin Value */
+/*Comment!: Read Pin Value
+ *          Takes a Pin index and a pointer to save the the pin value at
+ *           and returns the function state, Error if the Index is out of boundry
+ *           and ok otherwise*/
 extern u8 DIO_u8ReadPinVal(u8 Copy_u8PinIdx, u8* Copy_u8PtrToVal)
 {
 	u8 Local_u8FunState=u8Error;
@@ -61,7 +70,10 @@ extern u8 DIO_u8ReadPinVal(u8 Copy_u8PinIdx, u8* Copy_u8PtrToVal)
 }
 
 
-/*Comment!: Write Pin Value */
+/*Comment!: Write Pin Value
+ * 			Takes a Pin index and the pin value
+ *           and returns the function state, Error if the Index is out of boundry
+ *           and ok otherwise */
 extern u8 DIO_u8WritePinVal(u8 Copy_u8PinIdx, u8 Copy_u8PinVal)
 {
 			u8 Local_u8FunState=u8Error;
@@ -84,7 +96,10 @@ extern u8 DIO_u8WritePinVal(u8 Copy_u8PinIdx, u8 Copy_u8PinVal)
 }
 
 
-/*Comment!: Read Port Value */
+/*Comment!: Read Port Value
+ * 			Takes a Port index and a pointer to save the the port value at
+ *           and returns the function state, Error if the Index is out of boundry
+ *           and ok otherwise */
 extern u8 DIO_u8ReadPortVal(u8 Copy_u8PortIdx, u8* Copy_u8PtrToVal)
 {
 	u8 Local_u8FunState=u8Error;
@@ -106,7 +121,10 @@ extern u8 DIO_u8ReadPortVal(u8 Copy_u8PortIdx, u8* Copy_u8PtrToVal)
 }
 
 
-/*Comment!: Write Port Value */
+/*Comment!: Write Port Value
+ * 			Takes a Port index and the port value
+ *           and returns the function state, Error if the Index is out of boundry
+ *           and ok otherwise */
 extern u8 DIO_u8WritePortVal(u8 Copy_u8PortIdx, u8 Copy_u8PortVal)
 {
 	u8 Local_u8FunState=u8Error;
@@ -128,7 +146,10 @@ extern u8 DIO_u8WritePortVal(u8 Copy_u8PortIdx, u8 Copy_u8PortVal)
 }
 
 
-/*Comment!: Write Pin Direction */
+/*Comment!: Write Pin Direction
+ * 			Takes a Pin index and the pin direction
+ *           and returns the function state, Error if the Index is out of boundry
+ *           and ok otherwise */
 extern u8 DIO_u8WritePinDir(u8 Copy_u8PinIdx, u8 Copy_u8PinDir)
 {
 	u8 Local_u8FunState=u8Error;
@@ -154,7 +175,10 @@ extern u8 DIO_u8WritePinDir(u8 Copy_u8PinIdx, u8 Copy_u8PinDir)
 }
 
 
-/*Comment!: Write Port Direction */
+/*Comment!: Write Port Direction
+ * 			Takes a Port index and the port direction
+ *           and returns the function state, Error if the Index is out of boundry
+ *           and ok otherwise */
 extern u8 DIO_u8WritePortDir(u8 Copy_u8PortIdx, u8 Copy_u8PortDir)
 {
 	u8 Local_u8FunState=u8Error;
@@ -176,7 +200,10 @@ extern u8 DIO_u8WritePortDir(u8 Copy_u8PortIdx, u8 Copy_u8PortDir)
 }
 
 
-/* Comment!: Read Pin Direction */
+/* Comment!: Read Pin Direction
+ * 			Takes a Pin index and a pointer to the pin direction
+ *           and returns the function state, Error if the Index is out of boundry
+ *           and ok otherwise */
 extern u8 DIO_u8ReadPinDir(u8 Copy_u8PinIdx, u8* Copy_u8PtrToDir)
 {
 
@@ -200,7 +227,10 @@ extern u8 DIO_u8ReadPinDir(u8 Copy_u8PinIdx, u8* Copy_u8PtrToDir)
 
 }
 
-/* Comment!: Read Port Direction */
+/* Comment!: Read Port Direction
+ * 			Takes a Port index and a pointer to the port direction
+ *           and returns the function state, Error if the Index is out of boundry
+ *           and ok otherwise */
 extern u8 DIO_u8ReadPortDir(u8 Copy_u8PortIdx, u8* Copy_u8PtrToDir)
 {
 	u8 Local_u8FunState=u8Error;

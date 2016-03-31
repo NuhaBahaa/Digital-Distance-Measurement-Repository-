@@ -41,6 +41,7 @@
 
 
 
+/*Comment!: Concatination function to concatinate 8 bits into one byte   */
 #define conc(bit0,bit1,bit2,bit3,bit4,bit5,bit6,bit7)	conchelper(bit0,bit1,bit2,bit3,bit4,bit5,bit6,bit7)
 #define conchelper(b0,b1,b2,b3,b4,b5,b6,b7)	0b##b7##b6##b5##b4##b3##b2##b1##b0
 
